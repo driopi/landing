@@ -271,7 +271,6 @@
             line-height: 1.7;
         }
 
-        /* Contact Section — БЕЗ ИКОНОК */
         .contact-container {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -330,8 +329,18 @@
             font-size: 1.1rem;
         }
 
+        /* Mobile styles */
         @media (max-width: 768px) {
-            .nav-container { padding: 1rem; }
+            .nav-container {
+                padding: 1rem 1.2rem;
+                /* Логотип слева, кнопка меню — справа */
+                justify-content: space-between;
+            }
+
+            .logo {
+                font-size: 1.7rem;
+            }
+
             nav ul {
                 display: none;
                 position: absolute;
@@ -342,24 +351,63 @@
                 flex-direction: column;
                 padding: 1.2rem 0;
                 box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
+                text-align: center;
             }
-            nav ul.show { display: flex; }
-            .mobile-menu-btn { display: block; }
-            .slogan { font-size: 2.4rem; }
-            .about-content { flex-direction: column; gap: 2.5rem; }
-            section { padding: 5rem 1.5rem; }
-            .section-title { font-size: 2.2rem; }
-            .contact-container { gap: 2rem; }
+
+            nav ul.show {
+                display: flex;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+                /* Кнопка прижата к правому краю */
+                margin-left: auto;
+            }
+
+            .slogan {
+                font-size: 2.4rem;
+            }
+
+            .about-content {
+                flex-direction: column;
+                gap: 2.5rem;
+            }
+
+            section {
+                padding: 5rem 1.5rem;
+            }
+
+            .section-title {
+                font-size: 2.2rem;
+            }
+
+            .contact-container {
+                gap: 2rem;
+            }
         }
 
         @media (max-width: 480px) {
-            .slogan { font-size: 2rem; }
-            .cta-button { padding: 0.9rem 2.2rem; font-size: 1.1rem; }
-            .section-title { font-size: 1.9rem; }
-            .contact-title { font-size: 1.25rem; }
+            .slogan {
+                font-size: 2rem;
+            }
+
+            .cta-button {
+                padding: 0.9rem 2.2rem;
+                font-size: 1.1rem;
+            }
+
+            .section-title {
+                font-size: 1.9rem;
+            }
+
+            .contact-title {
+                font-size: 1.25rem;
+            }
         }
 
-        html { scroll-behavior: smooth; }
+        html {
+            scroll-behavior: smooth;
+        }
     </style>
 </head>
 <body>
